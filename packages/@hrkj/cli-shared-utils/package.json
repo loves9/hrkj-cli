@@ -1,6 +1,6 @@
 {
-  "name": "@vue/cli-shared-utils",
-  "version": "3.0.0-beta.6",
+  "name": "@hrkj/cli-shared-utils",
+  "version": "1.0.0",
   "description": "shared utilities for hrkj-cli packages",
   "main": "index.js",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "git+https://github.com/loves9/hrkj-cli.git"
   },
   "keywords": [
-    "vue",
+    "hrkj",
     "cli",
     "cli-shared-utils"
   ],
