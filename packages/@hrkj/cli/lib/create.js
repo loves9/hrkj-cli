@@ -3,15 +3,16 @@ const path = require('path')
 const chalk = require('chalk')
 const rimraf = require('rimraf')
 const inquirer = require('inquirer')
-const Creator = require('./Creator')
+// const Creator = require('./Creator')
 const clearConsole = require('./util/clearConsole')
-const { error, stopSpinner } = require('@hrkj/cli-shared-utils')
+const { error, stopSpinner } = require('@vue/cli-shared-utils')
 
 async function create (projectName, options) {
   const inCurrent = projectName === '.'
   const name = inCurrent ? path.relative('../', process.cwd()) : projectName
   const targetDir = path.resolve(projectName || '.')
-
+  
+  // check
   if (fs.existsSync(targetDir)) {
     if (options.force) {
       rimraf.sync(targetDir)
@@ -50,20 +51,34 @@ async function create (projectName, options) {
     }
   }
 
-  const promptModules = [
-    'babel',
-    'typescript',
-    'pwa',
-    'router',
-    'vuex',
-    'cssPreprocessors',
-    'linter',
-    'unit',
-    'e2e'
-  ].map(file => require(`./promptModules/${file}`))
+  // const promptModules = [
+  //   'babel',
+  //   'typescript',
+  //   'pwa',
+  //   'router',
+  //   'vuex',
+  //   'cssPreprocessors',
+  //   'linter',
+  //   'unit',
+  //   'e2e'
+  // ].map(file => require(`./promptModules/${file}`))
 
-  const creator = new Creator(name, targetDir, promptModules)
-  await creator.create(options)
+  // const creator = new Creator(name, targetDir, promptModules)
+  // await creator.create(options)
+
+  // request repo
+  var download = require('download-git-repo')
+
+  var loadNormalTmpl = function(cb){
+    download('loves9/WebApp', targetDir, function (err) {
+      if(err){
+        console.log('err', err);
+      }
+      cb && cb(err);
+    });
+  }
+
+  loadNormalTmpl()
 }
 
 module.exports = (...args) => {

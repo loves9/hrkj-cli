@@ -1,0 +1,85 @@
+0 silly input [ 'publish' ]
+1 silly flags { _: [ 'publish' ], 'reject-cycles': false, rejectCycles: false }
+2 verbose rootPath /Users/ifeng/Documents/GitHub/hrkj-cli
+3 info version 2.10.2
+4 silly isInitialized
+5 silly isInitialized true
+6 silly existsSync /Users/ifeng/Documents/GitHub/hrkj-cli/VERSION
+7 silly initialize attempt
+8 info current version 1.0.1
+9 silly isDetachedHead
+10 silly getCurrentBranch
+11 verbose getCurrentBranch master
+12 verbose isDetachedHead false
+13 silly getCurrentBranch
+14 verbose getCurrentBranch master
+15 silly getUpdates
+16 info Checking for updated packages...
+17 silly hasTags
+18 verbose hasTags true
+19 silly getLastTag
+20 verbose getLastTag v1.0.7
+21 info Comparing with v1.0.7.
+22 silly diffSinceIn v1.0.7 packages/@hrkj/cli
+23 silly diff packages/@hrkj/cli/bin/cli.js
+23 silly diff packages/@hrkj/cli/lib/Creator.js
+23 silly diff packages/@hrkj/cli/lib/Generator.js
+23 silly diff packages/@hrkj/cli/lib/PromptModuleAPI.js
+23 silly diff packages/@hrkj/cli/lib/create.js
+23 silly diff packages/@hrkj/cli/lib/util/clearConsole.js
+23 silly diff packages/@hrkj/cli/lib/util/getVersions.js
+23 silly diff packages/@hrkj/cli/lib/util/linkBin.js
+23 silly diff packages/@hrkj/cli/package.json
+24 verbose updated @hrkj/cli
+25 info Checking for prereleased packages...
+26 silly collectDependents
+27 silly isPackageDependentOf @hrkj/cli @hrkj/cli
+28 silly collectUpdates
+29 verbose has filtered update @hrkj/cli
+30 silly initialize success
+31 silly execute attempt
+32 silly addFile /Users/ifeng/Documents/GitHub/hrkj-cli/lerna.json
+33 silly runScriptSync preversion undefined
+34 silly runScriptSync preversion @hrkj/cli
+35 silly runScriptSync version @hrkj/cli
+36 silly runScriptSync version undefined
+37 silly addFile /Users/ifeng/Documents/GitHub/hrkj-cli/packages/@hrkj/cli/package.json
+38 silly commit v1.0.8
+39 verbose commit [ 'commit', '--no-verify', '-m', 'v1.0.8' ]
+40 silly addTag v1.0.8
+41 silly runScriptSync postversion @hrkj/cli
+42 silly runScriptSync postversion undefined
+43 info publish Publishing packages to npm...
+44 silly existsSync /Users/ifeng/Documents/GitHub/hrkj-cli/packages/@hrkj/cli/scripts/prepublish.js
+45 verbose execScript No prepublish script found at /Users/ifeng/Documents/GitHub/hrkj-cli/packages/@hrkj/cli/scripts/prepublish.js
+46 verbose publishing @hrkj/cli
+47 silly publishTaggedInDir latest cli
+48 silly getExecOpts { cwd: '/Users/ifeng/Documents/GitHub/hrkj-cli/packages/@hrkj/cli' }
+49 error publish Retrying failed publish: @hrkj/cli
+50 verbose publish error undefined
+51 verbose publishing @hrkj/cli
+52 silly publishTaggedInDir latest cli
+53 silly getExecOpts { cwd: '/Users/ifeng/Documents/GitHub/hrkj-cli/packages/@hrkj/cli' }
+54 error publish Retrying failed publish: @hrkj/cli
+55 verbose publish error undefined
+56 verbose publishing @hrkj/cli
+57 silly publishTaggedInDir latest cli
+58 silly getExecOpts { cwd: '/Users/ifeng/Documents/GitHub/hrkj-cli/packages/@hrkj/cli' }
+59 error publish Retrying failed publish: @hrkj/cli
+60 verbose publish error undefined
+61 verbose publishing @hrkj/cli
+62 silly publishTaggedInDir latest cli
+63 silly getExecOpts { cwd: '/Users/ifeng/Documents/GitHub/hrkj-cli/packages/@hrkj/cli' }
+64 error publish Retrying failed publish: @hrkj/cli
+65 verbose publish error undefined
+66 verbose publishing @hrkj/cli
+67 silly publishTaggedInDir latest cli
+68 silly getExecOpts { cwd: '/Users/ifeng/Documents/GitHub/hrkj-cli/packages/@hrkj/cli' }
+69 error publish Ran out of retries while publishing @hrkj/cli Error: spawn yarn ENOENT
+69 error publish     at Process.ChildProcess._handle.onexit (internal/child_process.js:201:19)
+69 error publish     at onErrorNT (internal/child_process.js:379:16)
+69 error publish     at process._tickCallback (internal/process/next_tick.js:114:19)
+70 error execute callback with error
+71 error Error: spawn yarn ENOENT
+71 error     at Process.ChildProcess._handle.onexit (internal/child_process.js:201:19)
+71 error     at onErrorNT (internal/child_process.js:379:16)

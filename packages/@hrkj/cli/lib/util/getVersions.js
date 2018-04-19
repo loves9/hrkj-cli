@@ -4,7 +4,7 @@ module.exports = async function getVersions () {
   if (process.env.VUE_CLI_LATEST_VERSION) {
     // cached value
     latest = process.env.VUE_CLI_LATEST_VERSION
-  } else if (process.env.VUE_CLI_TEST || process.env.VUE_CLI_DEBUG) {
+  } else if (process.env.VUE_CLI_TEST || process.env.HRKJ_CLI_DEBUG) {
     // test/debug, use local version
     latest = process.env.VUE_CLI_LATEST_VERSION = current
   } else {

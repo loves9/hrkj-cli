@@ -11,7 +11,7 @@ module.exports = async function clearConsoleWithTitle (checkUpdate) {
   if (process.env.VUE_CLI_TEST) {
     title += ' ' + chalk.blue.bold('TEST')
   }
-  if (process.env.VUE_CLI_DEBUG) {
+  if (process.env.HRKJ_CLI_DEBUG) {
     title += ' ' + chalk.magenta.bold('DEBUG')
   }
   if (checkUpdate && semver.gt(latest, current)) {
