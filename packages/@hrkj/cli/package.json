@@ -1,6 +1,6 @@
 {
   "name": "@hrkj/cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Command line interface for rapid RXT development",
   "bin": {
     "hrkj": "bin/cli.js"
