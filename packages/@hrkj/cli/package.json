@@ -1,6 +1,6 @@
 {
   "name": "@hrkj/cli",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "Command line interface for rapid RXT development",
   "bin": {
     "hrkj": "bin/cli.js"
@@ -24,6 +24,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@vue/cli-service": "3.0.0-beta.6",
     "@vue/cli-shared-utils": "^3.0.0-beta.6",
     "chalk": "^2.3.0",
     "commander": "^2.12.2",
