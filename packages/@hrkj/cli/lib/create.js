@@ -5,7 +5,7 @@ const rimraf = require('rimraf')
 const inquirer = require('inquirer')
 // const Creator = require('./Creator')
 const clearConsole = require('./util/clearConsole')
-const { error, stopSpinner } = require('@vue/cli-shared-utils')
+const { error, stopSpinner, logWithSpinner, log } = require('@vue/cli-shared-utils')
 
 async function create (projectName, options) {
   const inCurrent = projectName === '.'
@@ -70,11 +70,15 @@ async function create (projectName, options) {
   var download = require('download-git-repo')
 
   var loadNormalTmpl = function(cb){
+    logWithSpinner(`✨`, `${chalk.yellow(`⚙  Installing... This might take a while...`)}.`)
+    
     download('loves9/WebApp', targetDir, function (err) {
       if(err){
         console.log('err', err);
+      }else{
       }
       cb && cb(err);
+      stopSpinner()
     });
   }
 
