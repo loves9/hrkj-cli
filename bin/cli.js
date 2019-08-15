@@ -37,14 +37,9 @@ program
 // 创建工程
 program
   .command('create <app-name>')
-  .description('create a new project powered by vue-cli-service')
-  .option('-p, --preset <presetName>', 'Skip prompts and use saved or remote preset')
+  .description('create a new project powered by hrkj-cli-service')
+  .option('-f, --framework7', 'Create a framework7-vue project')
   .option('-d, --default', 'Skip prompts and use default preset')
-  .option('-i, --inlinePreset <json>', 'Skip prompts and use inline JSON string as preset')
-  .option('-m, --packageManager <command>', 'Use specified npm client when installing dependencies')
-  .option('-r, --registry <url>', 'Use specified npm registry when installing dependencies (only for npm)')
-  .option('-f, --force', 'Overwrite target directory if it exists')
-  .option('-c, --clone', 'Use git clone when fetching remote preset')
   .action((name, cmd) => {
     require('../lib/create')(name, cleanArgs(cmd))
   })

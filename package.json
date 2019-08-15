@@ -1,22 +1,60 @@
 {
- "private": true,
- "workspaces": [
-  "packages/@hrkj/*"
- ],
- "devDependencies": {
-  "lerna": "^2.10.2",
-  "babel-core": "^7.0.0-0",
-  "debug": "^3.1.0",
-  "eslint": "^4.16.0",
-  "eslint-plugin-vue-libs": "^2.1.0",
-  "globby": "^8.0.1",
-  "http-server": "^0.11.1",
-  "jest": "^22.1.4",
-  "lint-staged": "^6.0.1",
-  "memfs": "^2.6.0",
-  "puppeteer": "^1.0.0",
-  "request": "^2.83.0",
-  "request-promise-native": "^1.0.5",
-  "yorkie": "^1.0.2"
- }
+  "name": "hrkj-cli",
+  "version": "1.0.2",
+  "description": "Command line interface for rapid RXT development",
+  "scripts": {
+    "create": "node bin/cli.js create"
+  },
+  "bin": {
+    "hrkj": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loves9/hrkj-cli.git"
+  },
+  "keywords": [
+    "hrkj",
+    "cli"
+  ],
+  "author": "Feng Shuai",
+  "license": "MIT",
+  "homepage": "https://github.com/loves9/hrkj-cli#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@vue/cli-service": "3.10.0",
+    "@vue/cli-shared-utils": "^3.10.0",
+    "chalk": "^2.4.2",
+    "commander": "^3.0.0",
+    "debug": "^4.1.1",
+    "download-git-repo": "^2.0.0",
+    "ejs": "^2.6.2",
+    "execa": "^2.0.3",
+    "globby": "^10.0.1",
+    "import-global": "^0.1.0",
+    "inquirer": "^6.5.1",
+    "isbinaryfile": "^4.0.2",
+    "javascript-stringify": "^2.0.0",
+    "js-yaml": "^3.13.1",
+    "klaw-sync": "^6.0.0",
+    "lodash.clonedeep": "^4.5.0",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "recast": "^0.18.2",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "resolve": "^1.12.0",
+    "rimraf": "^3.0.0",
+    "semver": "^6.3.0",
+    "slash": "^3.0.0",
+    "yaml-front-matter": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=8"
+  }
 }
