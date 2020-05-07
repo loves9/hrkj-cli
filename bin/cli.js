@@ -31,20 +31,21 @@ const program = require('commander')
 const loadCommand = require('../lib/util/loadCommand')
 
 program
-  .version(require('../package').version)
+  .version(require('../package.json').version)
   .usage('<command> [options]')
 
 // 创建工程
 program
   .command('create <app-name>')
-  .description('create a new project powered by hrkj-cli-service')
-  .option('-f, --framework7', 'Create a framework7-vue project')
+  .description('create a new project powered by hrkj-cli')
+  .option('-f, --framework7', 'Create a framework7 project')
+  .option('-v, --vue', 'Create a framework7-vue project')
+  .option('-r, --react', 'Create a typescript react project')
   .option('-d, --default', 'Skip prompts and use default preset')
+  .option('--typescript', 'Use TypeScript')
   .action((name, cmd) => {
     require('../lib/create')(name, cleanArgs(cmd))
   })
-
-
 
 // output help information on unknown commands
 program

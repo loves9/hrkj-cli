@@ -1,9 +1,9 @@
 {
   "name": "hrkj-cli",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Command line interface for rapid RXT development",
   "scripts": {
-    "create": "node bin/cli.js create"
+    "test": "node bin/cli.js create demo --typescript --framework7 --react"
   },
   "bin": {
     "hrkj": "bin/cli.js"
@@ -30,7 +30,7 @@
     "@vue/cli-service": "3.10.0",
     "@vue/cli-shared-utils": "^3.10.0",
     "chalk": "^2.4.2",
-    "commander": "^3.0.0",
+    "commander": "^5.0.0",
     "debug": "^4.1.1",
     "download-git-repo": "^2.0.0",
     "ejs": "^2.6.2",
